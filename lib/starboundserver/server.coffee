@@ -26,7 +26,7 @@ class StarboundServer extends EventEmitter
     checkFrequency: 60
     watchInterval: 100
     maxChatSize: 100
-    serverChatName: 'SERVER'
+    serverChatName: ''
     ignoreChatPrefixes: '/#'
     db: null
 
