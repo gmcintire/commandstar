@@ -86,8 +86,11 @@ starserver.on "chat", ( who, what, chatWhen ) ->
   io.sockets.emit 'chat', msg
   notifyHipchat "#{who}: #{what}"
   
-  who = "<#{who}>"
-  who = "" if who == "SERVER"
+  
+  if who == "SERVER"
+    who = "" 
+  else
+    who = "<#{who}>"
 
   notifyIrc "#{who} #{what}"
 
