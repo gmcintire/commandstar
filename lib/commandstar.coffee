@@ -92,7 +92,7 @@ starserver.on "chat", ( who, what, chatWhen ) ->
   else
     who = "<#{who}>"
 
-  notifyIrc "#{who} #{what}"
+  notifyIrc "#{who}#{what}"
 
 starserver.on "start", ( chatWhen, why ) ->
   io.sockets.emit 'serverStatus', { status: 1 }
